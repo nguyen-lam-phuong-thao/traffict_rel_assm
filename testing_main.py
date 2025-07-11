@@ -40,7 +40,11 @@ if __name__ == "__main__":
         config['green_duration'],
         config['yellow_duration'],
         config['num_states'],
-        config['num_actions']
+        config['num_actions'],
+        min_green_duration=config.get('min_green_duration', 8),
+        weight_emergency=config.get('weight_emergency', 2),
+        max_phase_switch=config.get('max_phase_switch', 20),
+        phase_change_warmup=config.get('phase_change_warmup', 50)
     )
 
     print('\n----- Test episode')
